@@ -1,0 +1,70 @@
+.header {
+  position: relative;
+  background: rgba(18, 22, 24, 1);
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  padding-right: 30px;
+  @media (min-width: 600px) {
+    height: 80px;
+  }
+
+  .navigation--menu {
+    width: 325px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 800px) {
+      display: none;
+    }
+    .navigation--link {
+      font-family: Oswald;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23.71px;
+      letter-spacing: 0.03em;
+      text-align: center;
+      color: rgba(245, 245, 245, 1);
+    }
+
+    .active {
+      color: rgba(7, 150, 239, 1);
+    }
+  }
+  .hamburger--icon {
+    width: 30px;
+    @media (min-width: 800px) {
+      display: none;
+    }
+  }
+  .header--logo {
+    display: flex;
+    position: absolute;
+    left: 160px;
+    bottom: -52px;
+    gap: 10px;
+
+    @media (max-width:800px) {
+      display: none;
+    }
+  
+
+    .header--child--logo {
+      font-family: Oswald;
+      font-size: 35px;
+      font-weight: 400;
+      text-align: left;
+
+
+      .logo--primary {
+        color: rgba(7, 150, 239, 1);
+      }
+      .logo--secondary {
+        color: rgba(255, 255, 255, 1);
+      }
+      .logo--gray {
+        color: rgba(133, 120, 120, 1);
+      }
+    }
+  }
+}

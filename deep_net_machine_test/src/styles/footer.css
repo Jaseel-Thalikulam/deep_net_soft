@@ -1,0 +1,120 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: fit-content;
+}
+
+.sub--footer--one {
+  flex: 0 0 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+@media (max-width:600px) {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+  .footer--child {
+    border-radius: 20px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 1);
+    width: 350px;
+    height: 100%;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .footer--logo{
+     position: absolute; 
+     width: 60px;
+     top: -30px;
+     @media (max-width:600px) {
+      width: 45px;
+      top: -15px;
+      
+     }
+    }
+    
+    .footer--info {
+      color: rgba(133, 120, 120, 1);
+      font-family: Oswald;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 23.71px;
+      letter-spacing: 0.03em;
+      text-align: left;
+    }
+
+    .footer--info--wrap {
+      display: flex;
+      gap: 5px;
+    }
+
+    .footer--child--title {
+      color: rgba(7, 150, 239, 1);
+      font-family: Oswald;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 23.71px;
+      letter-spacing: 0.03em;
+      text-align: left;
+    }
+
+    .footer--child--logo {
+      font-family: Oswald;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 51.87px;
+      letter-spacing: 0.03em;
+      text-align: left;
+
+      .logo--primary {
+        color: rgba(7, 150, 239, 1);
+      }
+      .logo--secondary {
+        color: rgba(255, 255, 255, 1);
+      }
+      .logo--gray {
+        color: rgba(133, 120, 120, 1);
+      }
+    }
+  }
+}
+
+.sub--footer--two {
+  flex: 0 0 15%;
+  background-color: #d9d9d927;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  a {
+    color: #857878;
+    font-family: Lato;
+    font-family: Lato;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-align: left;
+
+    @media (min-width: 600px) {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 16.8px;
+      letter-spacing: 0.03em;
+      text-align: center;
+    }
+  }
+
+  div {
+    display: flex;
+    gap: 10px;
+  }
+}
