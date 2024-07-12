@@ -1,8 +1,20 @@
 import "../styles/header.css";
 import hamburger from "../assets/hamburger.svg";
 import logo from "../assets/logo-transparent.svg";
-import { Link } from "react-router-dom";
+import { Link ,useLocation} from "react-router-dom";
+
 const Header = () => {
+const location = useLocation();
+
+
+  const currentPath = location.pathname;
+  
+const links = [
+  { to: "/home", text: "Home" },
+  { to: "/menu", text: "Menu" },
+  { to: "/reservation", text: "Make a Reservation" },
+  { to: "/contact", text: "Contact Us" },
+];
   return (
     <div className="header">
       <div className="header--logo">
@@ -19,21 +31,17 @@ const Header = () => {
       </div>
       <img src={hamburger} className="hamburger--icon" />
       <div className="navigation--menu">
-        <Link className="navigation--link" to={"/home"}>
-          Home
-        </Link>
-        <Link className="navigation--link active" to={"/home"}>
-          Home
-        </Link>
-        <Link className="navigation--link" to={"/home"}>
-          Home
-        </Link>
-        <Link className="navigation--link" to={"/home"}>
-          Home
-        </Link>
-        <Link className="navigation--link" to={"/home"}>
-          Home
-        </Link>
+        {links.map((link, index) => (
+          <Link
+            key={index}
+            className={`navigation--link ${
+              currentPath.startsWith(link.to) ? "active" : null
+            }`}
+            to={link.to}
+          >
+            {link.text}
+          </Link>
+        ))}
       </div>
     </div>
   );

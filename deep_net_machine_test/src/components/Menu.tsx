@@ -32,14 +32,14 @@ const Menu = () => {
                 </div>
                 <div className="policy">
                   <p>
-                    Food may not be refunded. If your food was made incorrectly
-                    we will remake it for y ou.
+                    18% service charge will be added to all checks over $100.
                   </p>
                 </div>
                 <div className="policy">
                   <p>
-                    Food may not be refunded. If your food was made incorrectly
-                    we will remake it for you.
+                    Consuming raw or undercooked meats, poultry, seafood,
+                    shellfish or eggs may increase your risk of foodborne
+                    illness
                   </p>
                 </div>
               </div>
